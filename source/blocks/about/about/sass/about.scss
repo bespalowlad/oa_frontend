@@ -1,0 +1,50 @@
+@include module('08', 'about-about') {
+    .about {
+        padding-bottom: 90px;
+        box-sizing: border-box;
+        
+        &__title {
+            font-size: 18px;
+            letter-spacing: -0.5px;
+            margin-top: 40px;
+            margin-bottom: 74px;
+            font-weight: 500;
+        }
+
+        &__text-grid {
+            display: grid;
+            grid-column-gap: 20px;
+            grid-template-columns: 1fr 1fr; 
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.15px;
+
+            &--left {
+                font-size: 18px;
+                line-height: 1.44;
+                letter-spacing: -0.2px;
+                max-width: 423px;
+            }
+
+            &--right {
+                padding-right: 43px;
+                padding-top: 2px;
+                padding-left: 3px;
+
+                & > * {
+                    line-height: 1.43;
+                    letter-spacing: -0.2px;
+                    margin-bottom: 20px;
+                    font-size: 14px;
+
+                    &:last-child {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

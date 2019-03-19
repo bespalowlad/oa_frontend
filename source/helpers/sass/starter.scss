@@ -1,0 +1,46 @@
+// Slick
+.slider {
+	&__slide,
+	.slick-list,
+	.slick-track {
+		height: 100%;
+	}
+  
+	&__slide {
+	  position: relative;
+	}
+}
+
+.slick-slider {
+	.slick-list,
+	.slick-track,
+	.slick-slide {
+		height: 100%;
+	}
+
+	.slick-slide {
+		position: relative;
+	}
+}
+
+.slick-slide {
+	outline: none;
+}
+
+// Tables class
+.table {
+	display: table;
+}
+  
+.tr {
+	display: table-row;
+}
+  
+.td {
+	display: table-cell;
+}
+
+// SVG
+.svg-container {
+	display: none;
+}

@@ -1,0 +1,11 @@
++module('08', 'blog')
+	section.blog
+		.container
+			h3.blog__title Blog
+			.blog__grid
+				- var posts = 9;
+				- for(var i = 0; i < posts; i++){
+				a(href="post.html").blog__item
+					.blog__img(style="background-image:url('img/post.jpg')")
+					p.blog__caption The Science Of Superstitions
+				- }

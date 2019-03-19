@@ -1,0 +1,43 @@
+@include module('08', 'main-header') {
+	.header {
+		height: 80px;
+		font-size: 14px;
+		font-weight: 500;
+        background: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        color: $white;
+		width: 100%;
+		transition: 0.3s all ease;
+	}
+
+	.logo {
+		align-self: center;
+	}
+
+	.menu {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+
+		&__list {
+			display: flex;
+			align-items: center;
+		}
+
+		&__item {
+			margin-right: 52px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__link {
+			
+		}
+	}
+
+}

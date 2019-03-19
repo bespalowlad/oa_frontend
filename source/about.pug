@@ -1,0 +1,19 @@
+//= helpers/pug/mixins.pug
+
+doctype html
+html
+	head
+		//= blocks/layout/head.pug
+		style(type='text/css').
+			.menu__item:first-child{
+				text-decoration: underline;
+			}
+	body(data-page="about")
+		//= blocks/main/header/header.pug
+		//= blocks/about/poster/poster.pug
+		//= blocks/about/about/about.pug
+		//= blocks/about/team/team.pug
+		//= blocks/about/awards/awards.pug
+		//= blocks/about/press/press.pug
+		//= blocks/includes/footer/footer.pug
+		//= blocks/layout/scripts.pug

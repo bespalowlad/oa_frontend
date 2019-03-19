@@ -1,0 +1,69 @@
+html {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background-color: #fff;
+    width: 100%;
+    z-index: 1;
+    font-family: 'SFUIText';
+    font-weight: normal;
+    font-style: normal;
+    color: $text-gray;
+}
+
+button {
+    box-shadow: none;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 0;
+    border: none;
+}
+
+iframe,
+video {
+    border: none;
+    -webkit-appearance: none;
+    -webkit-backface-visibility: hidden;
+}
+
+.site {
+    overflow: hidden;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+        transition: .3s;
+    }
+}
+
+.container {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    height: 100%;
+}

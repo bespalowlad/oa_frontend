@@ -1,0 +1,8 @@
+@include module('08', 'about-poster') {
+    .about {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 700px;
+    }
+}

@@ -1,0 +1,16 @@
++module('08', 'about-press')
+	section.press
+		.container
+			h3.press__title Press
+		.press__slider
+			.press__container
+				- var slide = 10;
+				- for(var i = 0; i < slide; i++){
+					a(href="").press__slide
+						.press__poster
+							.press__wrapper
+								img(src="img/press-slide.jpg")
+						.press__caption Salon, 2019
+				- }
+		.press__range
+			#range-slider

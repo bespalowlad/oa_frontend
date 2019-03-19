@@ -1,0 +1,31 @@
+{
+  "name": "project",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Bespalov Vladyslav <bespalov.station@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*",
+    "slick-slide": "*",
+    "nanoscroller": "*",
+    "sticky-kit": "*",
+    "wow": "*",
+    "packery": "*",
+    "images-loaded": "*",
+    "instantclick": "*",
+    "air-datepicker": "*",
+    "readmore-js": "^2.2.1",
+    "jquery-mousewheel": "^3.1.13"
+  }
+}

@@ -1,0 +1,68 @@
+@include module('08', 'usovo-description') {
+    .description {
+        &__crumbs {
+            font-size: 14px;
+            letter-spacing: -0.2px;
+            color: $text-gray;
+            padding-top: 38px;
+            padding-bottom: 76px;
+
+            span {
+                border-bottom: 1px solid $black;
+            }
+        }
+
+        &__line {
+            display: inline-block;
+            width: 25px;
+            height: 1px;
+            background: $black;
+            margin-left: 9px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        &__main-info {
+            width: 17.6%;
+
+            & > * {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &__project {
+            margin-top: -3px;
+        }
+
+        &__header {
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.15px;
+            font-weight: 500;
+        }
+
+        &__subtitle {
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        &__text {
+            width: 46.6%;
+            max-width: 700px;
+            font-size: 14px;
+            line-height: 1.5;
+            letter-spacing: -0.2px;
+            margin-left: auto;
+            margin-right: 2.6%;
+
+            & > * {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

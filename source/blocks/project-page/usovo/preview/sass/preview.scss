@@ -1,0 +1,138 @@
+@include module('08', 'usovo-preview') {
+    .preview {
+        padding-top: 115px;
+        padding-bottom: 104px;
+        box-sizing: border-box;
+
+        &__slider {
+            width: calc(100% + 40px);
+            overflow: hidden;
+        }
+
+        &__container {
+            display: inline-flex;
+        }
+
+        &__slide {
+            // width: 72.2%;
+            // padding-bottom: 50%;
+            position: relative;
+            margin-right: 40px;
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+
+            & > * {
+                &:not(:last-child) {
+                    // margin-right: 0;
+                }
+            }
+
+            &:first-child {
+                margin-left: 50px;
+            }
+            
+            &:last-child {
+                margin-right: 90px;
+            }
+        }
+
+        &__wrapper {
+
+            img {
+                // width: 100%;
+                -webkit-tap-highlight-color: transparent;
+                height: 666px;
+                width: 1083px;
+            }
+        }
+
+        &__range {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 68px;
+            margin-top: 37px;
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__next {
+            position: relative;
+            font-size: 14px;
+            letter-spacing: -0.2px;
+            color: $text-gray;
+            margin-right: 33px;
+
+            &:before {
+                content: url(../../../img/see-all-arrow.svg);
+                position: absolute;
+                top: 0;
+                right: -33px;
+            }
+        }
+
+        &__prev {
+            position: relative;
+            font-size: 14px;
+            letter-spacing: -0.2px;
+            color: $text-gray;
+            margin-left: 33px;
+
+            &:before {
+                content: url(../../../img/see-all-arrow.svg);
+                position: absolute;
+                top: 0;
+                left: -33px;
+                transform: scale(-1, 1);
+            }
+        }
+    }
+
+    .noUi-target {
+        width: 260px;
+        padding: 0 20px 0 18px;
+        height: 2px;
+        object-fit: contain;
+        background-color: #e0e0e0;
+        transition: .3s all ease;
+    }
+
+    .noUi-touch-area{
+        -webkit-appearance: none;
+        width: 40px;
+        height: 2px;
+        object-fit: contain;
+        background-color: #1d1e1f;
+        cursor: pointer;
+        transition: .3s all ease;
+        position: relative;
+        outline: none;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -7px;
+            bottom: -7px;
+            right: -7px;
+            left: -7px;
+        }
+    }
+    
+    .noUi-handle{
+        right: 19px !important;
+        top: -1px !important;
+        width: 0;
+        height: 0;
+        border: none;
+
+        &:before, &:after {
+            display: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

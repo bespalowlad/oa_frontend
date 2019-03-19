@@ -1,0 +1,11 @@
++module('08', 'about-team')
+	section.team
+		.container
+			.team__grid
+				- var teamList = [{name: 'Oleg Klodt',position: 'Co-Founder'},{name: 'Anna Agapova',position: 'Co-Founder and Creative Director'},{name: 'Anna Klepikovaa',position: 'Head of Interior Design'},{name: 'Alla Yaskovets',position: 'Head of PR'},{name: 'Anastasia Sheveleva',position: 'Marketing Manager'},{name: 'Vera Stepanova',position: 'O&A London Sales Director'}];
+				each item in teamList
+					.team__item
+						.team__img(style="background-image:url('')")
+						.team__footer
+							p= item.name
+							p= item.position

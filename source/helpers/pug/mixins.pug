@@ -1,0 +1,6 @@
+include ../node_modules/bempug/index
+
+mixin module(id, blockName)
+	- var c = "tftl-"+id+"-"+blockName;
+	div(class=c)
+		block

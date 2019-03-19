@@ -1,0 +1,32 @@
+
+
+//- Include core
+
+include core
+
+
+//- Element mixin
+
+mixin e( name, data, tag )
+
+	+b( name, data, tag )(isElement=true)&attributes(attributes): block
+
+
+//- Block mixin
+
+mixin b( name, data, tag )
+
+	- var myBlock = new BEMPUG.Block( name, data, tag, attributes );
+	
+	- BEMPUG.addData( myBlock );
+
+	if myBlock.selfClosing
+
+		#{myBlock.tag}(class=myBlock.classes)&attributes(myBlock.attributes)/
+
+	else
+
+		#{myBlock.tag}(class=myBlock.classes)&attributes(myBlock.attributes): block
+
+	- BEMPUG.removeData( myBlock );
+

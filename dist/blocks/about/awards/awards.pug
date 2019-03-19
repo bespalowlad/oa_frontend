@@ -1,0 +1,39 @@
++module('08', 'about-awards')
+	section.awards
+		.container
+			h3.awards__title Awards 2018
+			.awards__grid
+				- var item = 5;
+				- for(var i=0; i < item; i++) {
+					.awards__item
+						.awards__img
+							.awards__wrapper
+								img(src="")
+						.awards__text
+							a(href="").awards__caption Ad Best of Russia
+							p.awards__article AD magazine featured Oleg Klodt and Anna Agapova in their ratings of 100 best Russian architects and designers.
+				- }
+			h3.awards__title Awards 2017
+			.awards__grid
+				- var item = 5;
+				- for(var i=0; i < item; i++) {
+					.awards__item
+						.awards__img
+							.awards__wrapper
+								img(src="")
+						.awards__text
+							a(href="").awards__caption European property awards
+							p.awards__article Our studio has won an award in the category of Interior Design Private Residence.
+				- }
+			h3.awards__title Awards 2016
+			.awards__grid
+				- var item = 5;
+				- for(var i=0; i < item; i++) {
+					.awards__item
+						.awards__img
+							.awards__wrapper
+								img(src="")
+						.awards__text
+							a(href="").awards__caption Interia awards
+							p.awards__article Russia’s most prominent award for interior design. A project by Oleg Klodt and Anna Agapova was nominated in category “Apartments smaller than 150 square metres”.
+				- }

@@ -1,0 +1,91 @@
+// Module
+@mixin module($id, $blockName) {
+	.tftl-#{$id}-#{$blockName} {
+		@content;
+	}
+}
+
+// Adaptive
+$tablet: 1200;
+$tabletPortrait: 769;
+$mobile: 640;
+$mobileSmall: 320;
+
+@mixin r($width) {
+	@media only screen and (max-width: $width+ "px") {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@include r($tablet) {
+		@content;
+	}
+}
+
+@mixin tablet-portrait {
+	@include r($tabletPortrait) {
+		@content;
+	}    
+}
+
+@mixin mobile {
+	@include r($mobile) {
+		@content;
+	}
+}
+
+@mixin mobile-small {
+	@include r($mobileSmall) {
+		@content;
+	}
+}
+
+@mixin device-iPad_Pro {
+    @media screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin device-iPad_Pro-portrait {
+    @media screen and (min-width:1024px) and (max-height: 1366px) and (orientation: portrait) {
+		@content;
+	}	
+}
+
+@mixin device-iPhone_X {
+    @media only screen 
+        and (device-width : 375px) 
+        and (device-height : 812px) 
+        and (-webkit-device-pixel-ratio : 3) {
+        @content;
+    }
+}
+
+// Font-Face
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}

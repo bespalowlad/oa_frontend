@@ -1,0 +1,17 @@
+//= helpers/pug/mixins.pug
+
+doctype html
+html
+	head
+		//= blocks/layout/head.pug
+		style(type='text/css').
+			.menu__item:nth-child(2){
+				text-decoration: underline;
+			}
+	body(data-page="usovo-page")
+		//= blocks/main/header/header.pug
+		//= blocks/project-page/usovo/poster/poster.pug
+		//= blocks/project-page/usovo/description/decription.pug
+		//= blocks/project-page/usovo/preview/preview.pug
+		//= blocks/includes/footer/footer.pug
+		//= blocks/layout/scripts.pug

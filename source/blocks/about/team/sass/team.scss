@@ -1,0 +1,50 @@
+@include module('08', 'about-team') {
+    .team{
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 21px;
+            grid-row-gap: 40px;
+        }
+
+        &__item {
+            width: 100%;
+            position: relative;
+        }
+
+        &__img {
+            padding-bottom: 133%;
+            position: relative;
+            width: 100%;
+            background: #f2f2f2;
+            padding-bottom: 130%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-color: #f2f2f2;
+
+            & > * {
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+            }
+        }
+
+        &__footer {
+            margin-top: 20px;
+
+            & > * {
+                font-size: 14px;
+                font-weight: 6500;
+                line-height: 1.36;
+                letter-spacing: -0.2px;
+                // margin-bottom: 5px;
+
+                &:not(:last-child){
+                    // margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+//= helpers/pug/mixins.pug
+
+doctype html
+html
+	head
+		//= blocks/layout/head.pug
+		style(type='text/css').
+			.menu__item:nth-child(5){
+				border-bottom: 1px solid #1d1e1f;
+			}
+	body(data-page="post")
+		//= blocks/includes/header/header.pug
+		//= blocks/posts/post/post.pug
+		//= blocks/includes/footer/footer.pug
+		//= blocks/layout/scripts.pug

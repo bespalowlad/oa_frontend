@@ -14,12 +14,16 @@
         }
 
         &__slide {
-            // width: 72.2%;
-            // padding-bottom: 50%;
             position: relative;
             margin-right: 40px;
             -webkit-tap-highlight-color: transparent;
             cursor: pointer;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-bottom: 28%;
+            height: 666px;
+            width: 1083px;
 
             & > * {
                 &:not(:last-child) {
